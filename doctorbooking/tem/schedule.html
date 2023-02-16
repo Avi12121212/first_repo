@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first page</title>
+</head>
+<body>
+<!--{{schedules}}-->
+<table border="010">
+    <tr>
+        <th>Start Hour</th><th>Start Minutes</th><th>End Hour</th><th>End Minutes</th><th>status</th></tr>
+{% for schedule in schedules   %}
+<tr><td>{{schedule.shour}}</td><td>{{schedule.sminute}}</td><td>{{schedule.ehour}}</td><td>{{schedule.eminute}}</td>
+    <td><a href="http://127.0.0.1:8000/patientbooking/" target="_blank">booking</a></td> <td><a href="">cancle</a></td></tr>
+
+{% endfor %}
+    </table>
+</body>
+</html>
